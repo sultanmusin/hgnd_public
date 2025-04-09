@@ -1,0 +1,12 @@
+<connections>
+  <connection id="udp_board_0" uri="ipbusudp-2.0://172.20.75.35:50001" address_table="file://address_table.xml" />
+  <connection id="udp_board_1" uri="ipbusudp-2.0://172.20.75.36:50001" address_table="file://address_table.xml" />
+  
+  <!-- <connection id="udp_board_0" uri="chtcp-2.0://localhost:10203?target=172.20.75.35:50001" address_table="file://address_table.xml" />   -->
+  <!-- <connection id="udp_board_1" uri="chtcp-2.0://localhost:10203?target=172.20.75.36:50001" address_table="file://address_table.xml" />   -->
+  <!-- <connection id="udp_board_0" uri="chtcp-2.0://localhost:10203?target=172.20.75.181:50001" address_table="file://address_table.xml" /> -->
+
+  
+  <!-- <connection id="udp_board_0" uri="ipbusudp-2.0://172.20.75.181:50001" address_table="file://address_table.xml" /> -->
+  <!-- <connection id="udp_board_0" uri="ipbusudp-2.0://172.20.75.181:50001" address_table="file://address_table.xml" /> -->
+</connections>

@@ -1,0 +1,7 @@
+{
+    "udp_board_0": {
+        "default": false,
+        "1": false,
+        "3": false
+    }
+}

@@ -1,0 +1,11 @@
+services:
+  backend:
+    image: docker.entangled.ru/hgnd_v2_backend:latest
+    ports:
+      - ${BACKEND_PORT}:40080
+    volumes:
+      - ./volume:/volume
+  frontend:
+    image: docker.entangled.ru/hgnd_v2_frontend:latest
+    ports:
+      - ${FRONTEND_PORT}:80

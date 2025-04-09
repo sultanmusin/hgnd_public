@@ -1,0 +1,23 @@
+<node mode="block" size="3">
+    <node id="TDC_line_0" address="0x00" permission="r" tags="nopoll">
+        <node id="tdc_corr"     mask="0x000000FF" permission="r"/>
+        <node id="dly_val"      mask="0x00007F00" permission="r"/>
+        <node id="ready"        mask="0x00008000" permission="r"/>
+    </node>
+    <node id="TDC_line_1" address="0x00" permission="r" tags="nopoll">
+        <node id="tdc_corr"     mask="0x00FF0000" permission="r"/>
+        <node id="dly_val"      mask="0x7F000000" permission="r"/>
+        <node id="ready"        mask="0x80000000" permission="r"/>
+    </node>
+    <node id="TDC_line_2" address="0x01" permission="r" tags="nopoll">
+        <node id="tdc_corr"     mask="0x000000FF" permission="r"/>
+        <node id="dly_val"      mask="0x00007F00" permission="r"/>
+        <node id="ready"        mask="0x00008000" permission="r"/>
+    </node>
+    <node id="TDC_line_3" address="0x01" permission="r" tags="nopoll">
+        <node id="tdc_corr"     mask="0x00FF0000" permission="r"/>
+        <node id="dly_val"      mask="0x7F000000" permission="r"/>
+        <node id="ready"        mask="0x80000000" permission="r"/>
+    </node>
+    <node id="hits_dropped" address="0x03" mask="0x000000FF" permission="r"/>
+</node>

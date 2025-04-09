@@ -1,0 +1,23 @@
+<node mode="block" size="2">
+    <node id="TDC_line_0" address="0x00" permission="rw" tags="nopoll">
+        <node id="tdc_corr"     mask="0x000000FF" permission="rw"/>
+        <node id="dly_val"      mask="0x00003F00" permission="rw"/>
+        <node id="ch_ena"       mask="0x00004000" permission="rw" tags="alwayspoll"/>
+        <node id="set_manual"   mask="0x00008000" permission="rw"/>
+    </node>
+    <node id="TDC_line_1" address="0x00" permission="rw" tags="nopoll">
+        <node id="tdc_corr"     mask="0x00FF0000" permission="rw"/>
+        <node id="dly_val"      mask="0x3F000000" permission="rw"/>
+        <node id="set_manual"   mask="0x80000000" permission="rw"/>
+    </node>
+    <node id="TDC_line_2" address="0x01" permission="rw" tags="nopoll">
+        <node id="tdc_corr"     mask="0x000000FF" permission="rw"/>
+        <node id="dly_val"      mask="0x00003F00" permission="rw"/>
+        <node id="set_manual"   mask="0x00008000" permission="rw"/>
+    </node>
+    <node id="TDC_line_3" address="0x01" permission="rw" tags="nopoll">
+        <node id="tdc_corr"     mask="0x00FF0000" permission="rw"/>
+        <node id="dly_val"      mask="0x3F000000" permission="rw"/>
+        <node id="set_manual"   mask="0x80000000" permission="rw"/>
+    </node>
+</node>

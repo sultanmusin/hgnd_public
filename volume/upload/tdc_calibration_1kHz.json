@@ -1,0 +1,9 @@
+{
+    "calibration_pulser_rate": 4,
+    "calibration_step_size": 39000,
+    "calibration_n_steps": 300,
+    "async_calib_size": 390000,
+    "registers" : {
+        "VCXO_man_ctrl": false
+    }
+}

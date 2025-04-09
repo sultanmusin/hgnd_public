@@ -1,0 +1,146 @@
+<node tags="hello"> 
+    <node id="CONTROL" address="0x00" mode="block" size="94" tags="nopoll">
+        <node id="RESET" address="0x00" tags="nopoll">
+            <node id="TDC_reset"    mask="0x00000001" tags="alwayspoll"/>
+            <node id="reset_rd_cnt" mask="0x00000002" tags="alwayspoll"/>
+            <node id="pls_reset" mask="0x00000004" tags="alwayspoll"/>
+        </node>
+
+        <node id="MODE" address="0x01" permission="rw" tags="nopoll">
+            <node id="readout_ena"          mask="0x00000001" permission="rw"/>
+            <node id="pls_phase_scan"       mask="0x00000002" permission="rw" tags="alwayspoll"/>
+            <node id="pls_phase_step"       mask="0x00000004" permission="rw" tags="alwayspoll"/>
+            <node id="pls_clk_async"        mask="0x00000008" permission="rw" tags="alwayspoll"/>
+            <node id="data_emu_enable"      mask="0x00000010" permission="rw"/>
+            <node id="SW0"                  mask="0x00000020" permission="rw" tags="alwayspoll"/>
+            <node id="SW1"                  mask="0x00000040" permission="rw" tags="alwayspoll"/>
+            <node id="SW2"                  mask="0x00000080" permission="rw" tags="alwayspoll"/>
+            <node id="SW3"                  mask="0x00000100" permission="rw" tags="alwayspoll"/>
+            <node id="SW4"                  mask="0x00000200" permission="rw" tags="alwayspoll"/>
+            <node id="LB0"                  mask="0x00000400" permission="rw" tags="alwayspoll"/>
+            <node id="LB1"                  mask="0x00000800" permission="rw" tags="alwayspoll"/>
+            <node id="WR_VCXO_man_ctrl"     mask="0x00001000" permission="rw" tags="alwayspoll"/>
+            <node id="pls_wr_timepulse_ena" mask="0x00002000" permission="rw" tags="alwayspoll"/>
+        </node>
+
+        <node id="tdc_dead_time"    address="0x02"  mask="0x000000FF" permission="rw"/>
+        <node id="pls_rate"         address="0x02"  mask="0x00000F00" permission="rw" tags="alwayspoll"/>
+        <node id="voltage_trsh"        address="0x02"  mask="0xFFFF0000" permission="rw" tags="alwayspoll"/>
+        <!-- <node id="DAQ_value"        address="0x02"  mask="0xFFFF0000" permission="rw"/> -->
+
+        <node id="emu_data_rate"    address="0x03"  mask="0x0000FFFF" permission="rw"/>
+        <node id="emu_trg_rate"     address="0x03"  mask="0xFFFF0000" permission="rw"/>
+        <node id="scan_length"      address="0x04"  mask="0x0000FFFF" permission="rw"/>
+        <node id="REF_VCXO_val"     address="0x05"  mask="0x0000FFFF" permission="rw"/>
+        <node id="DMTD_VCXO_val"    address="0x05"  mask="0xFFFF0000" permission="rw"/>
+
+        <node id="TDC_ch_0"  address="0x10" module="file://TDC_channel_control.xml" tags="nopoll"/>
+        <node id="TDC_ch_1"  address="0x12" module="file://TDC_channel_control.xml" tags="nopoll"/>
+        <node id="TDC_ch_2"  address="0x14" module="file://TDC_channel_control.xml" tags="nopoll"/>
+        <node id="TDC_ch_3"  address="0x16" module="file://TDC_channel_control.xml" tags="nopoll"/>
+        <node id="TDC_ch_4"  address="0x18" module="file://TDC_channel_control.xml" tags="nopoll"/>
+        <node id="TDC_ch_5"  address="0x1a" module="file://TDC_channel_control.xml" tags="nopoll"/>
+        <node id="TDC_ch_6"  address="0x1c" module="file://TDC_channel_control.xml" tags="nopoll"/>
+        <node id="TDC_ch_7"  address="0x1e" module="file://TDC_channel_control.xml" tags="nopoll"/>
+        <node id="TDC_ch_8"  address="0x20" module="file://TDC_channel_control.xml" tags="nopoll"/>
+        <node id="TDC_ch_9"  address="0x22" module="file://TDC_channel_control.xml" tags="nopoll"/>
+        <node id="TDC_ch_10" address="0x24" module="file://TDC_channel_control.xml" tags="nopoll"/>
+        <node id="TDC_ch_11" address="0x26" module="file://TDC_channel_control.xml" tags="nopoll"/>
+        <node id="TDC_ch_12" address="0x28" module="file://TDC_channel_control.xml" tags="nopoll"/>
+        <node id="TDC_ch_13" address="0x2a" module="file://TDC_channel_control.xml" tags="nopoll"/>
+        <node id="TDC_ch_14" address="0x2c" module="file://TDC_channel_control.xml" tags="nopoll"/>
+        <node id="TDC_ch_15" address="0x2e" module="file://TDC_channel_control.xml" tags="nopoll"/>
+        <node id="TDC_ch_16" address="0x30" module="file://TDC_channel_control.xml" tags="nopoll"/>
+        <node id="TDC_ch_17" address="0x32" module="file://TDC_channel_control.xml" tags="nopoll"/>
+        <node id="TDC_ch_18" address="0x34" module="file://TDC_channel_control.xml" tags="nopoll"/>
+        <node id="TDC_ch_19" address="0x36" module="file://TDC_channel_control.xml" tags="nopoll"/>
+        <node id="TDC_ch_20" address="0x38" module="file://TDC_channel_control.xml" tags="nopoll"/>
+        <node id="TDC_ch_21" address="0x3a" module="file://TDC_channel_control.xml" tags="nopoll"/>
+        <node id="TDC_ch_22" address="0x3c" module="file://TDC_channel_control.xml" tags="nopoll"/>
+        <node id="TDC_ch_23" address="0x3e" module="file://TDC_channel_control.xml" tags="nopoll"/>
+        <node id="TDC_ch_24" address="0x40" module="file://TDC_channel_control.xml" tags="nopoll"/>
+        <node id="TDC_ch_25" address="0x42" module="file://TDC_channel_control.xml" tags="nopoll"/>
+        <node id="TDC_ch_26" address="0x44" module="file://TDC_channel_control.xml" tags="nopoll"/>
+        <node id="TDC_ch_27" address="0x46" module="file://TDC_channel_control.xml" tags="nopoll"/>
+        <node id="TDC_ch_28" address="0x48" module="file://TDC_channel_control.xml" tags="nopoll"/>
+        <node id="TDC_ch_29" address="0x4a" module="file://TDC_channel_control.xml" tags="nopoll"/>
+        <node id="TDC_ch_30" address="0x4c" module="file://TDC_channel_control.xml" tags="nopoll"/>
+        <node id="TDC_ch_31" address="0x4e" module="file://TDC_channel_control.xml" tags="nopoll"/>
+        <node id="TDC_ch_32" address="0x50" module="file://TDC_channel_control.xml" tags="nopoll"/>
+        <node id="TDC_ch_33" address="0x52" module="file://TDC_channel_control.xml" tags="nopoll"/>
+        <node id="TDC_ch_34" address="0x54" module="file://TDC_channel_control.xml" tags="nopoll"/>
+        <node id="TDC_ch_35" address="0x56" module="file://TDC_channel_control.xml" tags="nopoll"/>
+        <node id="TDC_ch_36" address="0x58" module="file://TDC_channel_control.xml" tags="nopoll"/>
+        <node id="TDC_ch_37" address="0x5a" module="file://TDC_channel_control.xml" tags="nopoll"/>
+        <node id="TDC_ch_38" address="0x5c" module="file://TDC_channel_control.xml" tags="nopoll"/>
+    </node>
+
+    <node id="STATUS" address="0x100" mode="block" size="133" permission="r" tags="nopoll">
+        <node id="READOUT_FIFO_OUT" address="0x00" mode="non-incremental" permission="r"/>
+        <node id="RD_FIFO_cnt"      address="0x01"  mask="0x0000FFFF" permission="r"/>
+        <node id="tdc_clk_ready"    address="0x01"  mask="0xFF000000" permission="r" tags="alwayspoll"/>
+
+        <node id="mppc_temp"    address="0x02"  mask="0x0000FFFF" permission="r"/>
+        <node id="ADC_status"   address="0x02"  mask="0x00FF0000" permission="r"/>
+        <node id="WR_status"    address="0x02"  permission="r" tags="nopoll">
+            <node id="wr_link_up" mask="0x01000000" tags="alwayspoll"/>
+            <node id="wr_time_valid" mask="0x02000000" tags="alwayspoll"/>
+        </node>
+
+        <node id="REF_VCXO_act_val"    address="0x03"  mask="0x0000FFFF" permission="r" tags="alwayspoll"/>
+        <node id="DNTD_VCXO_act_val"   address="0x03"  mask="0xFFFF0000" permission="r" tags="alwayspoll"/>
+
+        <node id="wr_tm_cycles_27_4"   address="0x04"  mask="0x00FFFFFF" permission="r" tags="alwayspoll"/>
+        <node id="wr_tm_tai_7_0"       address="0x04"  mask="0xFF000000" permission="r" tags="alwayspoll"/>
+        <node id="wr_tm_tai_39_8"       address="0x05"  permission="r" tags="alwayspoll"/>
+        <node id="active_time_31_0"    address="0x06"  permission="r" tags="alwayspoll"/>
+        <node id="active_time_63_32"   address="0x07"  permission="r" tags="alwayspoll"/>
+        <node id="FW_timestamp"        address="0x08"  permission="r" tags="alwayspoll"/>
+
+        <node id="FPGA_Vccint"        address="0x09"  mask="0x00000FFF" permission="r" tags="alwayspoll"/>
+        <node id="FPGA_Vccaux"        address="0x09"  mask="0x00FFF000" permission="r" tags="alwayspoll"/>
+        <node id="FPGA_Temperature"   address="0x0A"  mask="0x00000FFF" permission="r" tags="alwayspoll"/>
+        <node id="pls_phase_val"    address="0x0A"  mask="0x00FFF000" permission="r" tags="alwayspoll"/>
+
+        <node id="TDC_ch_0"  address="0x10" module="file://TDC_channel_status.xml" tags="nopoll"/>
+        <node id="TDC_ch_1"  address="0x13" module="file://TDC_channel_status.xml" tags="nopoll"/>
+        <node id="TDC_ch_2"  address="0x16" module="file://TDC_channel_status.xml" tags="nopoll"/>
+        <node id="TDC_ch_3"  address="0x19" module="file://TDC_channel_status.xml" tags="nopoll"/>
+        <node id="TDC_ch_4"  address="0x1c" module="file://TDC_channel_status.xml" tags="nopoll"/>
+        <node id="TDC_ch_5"  address="0x1f" module="file://TDC_channel_status.xml" tags="nopoll"/>
+        <node id="TDC_ch_6"  address="0x22" module="file://TDC_channel_status.xml" tags="nopoll"/>
+        <node id="TDC_ch_7"  address="0x25" module="file://TDC_channel_status.xml" tags="nopoll"/>
+        <node id="TDC_ch_8"  address="0x28" module="file://TDC_channel_status.xml" tags="nopoll"/>
+        <node id="TDC_ch_9"  address="0x2b" module="file://TDC_channel_status.xml" tags="nopoll"/>
+        <node id="TDC_ch_10" address="0x2e" module="file://TDC_channel_status.xml" tags="nopoll"/>
+        <node id="TDC_ch_11" address="0x31" module="file://TDC_channel_status.xml" tags="nopoll"/>
+        <node id="TDC_ch_12" address="0x34" module="file://TDC_channel_status.xml" tags="nopoll"/>
+        <node id="TDC_ch_13" address="0x37" module="file://TDC_channel_status.xml" tags="nopoll"/>
+        <node id="TDC_ch_14" address="0x3a" module="file://TDC_channel_status.xml" tags="nopoll"/>
+        <node id="TDC_ch_15" address="0x3d" module="file://TDC_channel_status.xml" tags="nopoll"/>
+        <node id="TDC_ch_16" address="0x40" module="file://TDC_channel_status.xml" tags="nopoll"/>
+        <node id="TDC_ch_17" address="0x43" module="file://TDC_channel_status.xml" tags="nopoll"/>
+        <node id="TDC_ch_18" address="0x46" module="file://TDC_channel_status.xml" tags="nopoll"/>
+        <node id="TDC_ch_19" address="0x49" module="file://TDC_channel_status.xml" tags="nopoll"/>
+        <node id="TDC_ch_20" address="0x4c" module="file://TDC_channel_status.xml" tags="nopoll"/>
+        <node id="TDC_ch_21" address="0x4f" module="file://TDC_channel_status.xml" tags="nopoll"/>
+        <node id="TDC_ch_22" address="0x52" module="file://TDC_channel_status.xml" tags="nopoll"/>
+        <node id="TDC_ch_23" address="0x55" module="file://TDC_channel_status.xml" tags="nopoll"/>
+        <node id="TDC_ch_24" address="0x58" module="file://TDC_channel_status.xml" tags="nopoll"/>
+        <node id="TDC_ch_25" address="0x5b" module="file://TDC_channel_status.xml" tags="nopoll"/>
+        <node id="TDC_ch_26" address="0x5e" module="file://TDC_channel_status.xml" tags="nopoll"/>
+        <node id="TDC_ch_27" address="0x61" module="file://TDC_channel_status.xml" tags="nopoll"/>
+        <node id="TDC_ch_28" address="0x64" module="file://TDC_channel_status.xml" tags="nopoll"/>
+        <node id="TDC_ch_29" address="0x67" module="file://TDC_channel_status.xml" tags="nopoll"/>
+        <node id="TDC_ch_30" address="0x6a" module="file://TDC_channel_status.xml" tags="nopoll"/>
+        <node id="TDC_ch_31" address="0x6d" module="file://TDC_channel_status.xml" tags="nopoll"/>
+        <node id="TDC_ch_32" address="0x70" module="file://TDC_channel_status.xml" tags="nopoll"/>
+        <node id="TDC_ch_33" address="0x73" module="file://TDC_channel_status.xml" tags="nopoll"/>
+        <node id="TDC_ch_34" address="0x76" module="file://TDC_channel_status.xml" tags="nopoll"/>
+        <node id="TDC_ch_35" address="0x79" module="file://TDC_channel_status.xml" tags="nopoll"/>
+        <node id="TDC_ch_36" address="0x7c" module="file://TDC_channel_status.xml" tags="nopoll"/>
+        <node id="TDC_ch_37" address="0x7f" module="file://TDC_channel_status.xml" tags="nopoll"/>
+        <node id="TDC_ch_38" address="0x82" module="file://TDC_channel_status.xml" tags="nopoll"/>
+
+    </node>
+</node>
